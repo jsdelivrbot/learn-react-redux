@@ -10,7 +10,6 @@ export default class App extends Component {
       <div>
         <h3>TODO</h3>
         <TodoList />
-        <h3>Add</h3>
         <AddTodoForm />
       </div>
     );

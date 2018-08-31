@@ -19,7 +19,7 @@ class AddTodoForm extends Component {
   handleSubmit(event){
     event.preventDefault()
     if (!this.state.text.trim()) { return; }
-    this.props.addTodo({ text:this.state.text })
+    this.props.addTodo({ text: this.state.text })
     this.setState({text:''})
   }
 
