@@ -13,10 +13,8 @@ class TodoList extends Component {
   }
 }
 
+//Redux
 function mapStateToProps(state){
-  return{
-    todos: state.todos
-  }
+  return{ todos: state.todos }
 }
-
 export default connect(mapStateToProps)(TodoList);

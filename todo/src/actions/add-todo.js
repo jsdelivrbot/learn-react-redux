@@ -1,6 +1,6 @@
-export function addTodo(todo){
+export function addTodo(add){
   return {
-    type: ADD_TODO
-    todo: todo
+    type: 'ADD_TODO',
+    payload: add.text
   }
 }
