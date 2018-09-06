@@ -1,14 +1,14 @@
-import * as actions from '../actions'
+import * as a from "../actions";
 
-export default function(state = {}, action){
-  switch(action.type){
-    case actions.ADD:
-      return { text: action.payload, completed: false }
+export default function(state = {}, action) {
+  switch (action.type) {
+    case a.ADD_TODO:
+      return { text: action.payload, completed: false };
 
-    case actions.TOGGLE_COMPLETE:
-      return {...state, completed: !state.completed };
+    case a.TOGGLE_TODO_COMPLETE:
+      return { ...state, completed: !state.completed };
 
     default:
-      return {text:'', completed: false};
+      return { text: "", completed: false };
   }
 }
