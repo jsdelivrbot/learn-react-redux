@@ -1,5 +1,9 @@
-# REQUIREMENTS
 
+# learn-react-redux
+Projects used to learn and sharpen skills in react-redux
+
+
+# TODO - REQUIREMENTS
 * The user can type in the name of a new task
 * When the user presses the enter key, the current task is added
 * When a task is added, the current task name is cleared
