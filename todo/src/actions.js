@@ -5,38 +5,38 @@ export const CLEAR_COMPLETED_TODOS = "CLEAR_COMPLETED";
 //===========================================================
 // DISPACHERS
 //===========================================================
-export const dispatchAddTodo = function(store, text) {
+export function dispatchAddTodo(store, text) {
   store.dispatch(createAddTodo(text));
 };
 
-export const dispatchClearCompletedTodos = function(store) {
+export function dispatchClearCompletedTodos(store) {
   store.dispatch(createClearCompletedTodos());
 };
 
-export const dispatchToggleTodoComplete = function(store, index) {
+export function dispatchToggleTodoComplete(store, index) {
   store.dispatch(createToggleTodoComplete(index));
 };
 //===========================================================
 // ACTION CSTR
 //===========================================================
-const createAddTodo = function(text) {
+function createAddTodo(text) {
   return { type: ADD_TODO, payload: text };
 };
 
-const createClearCompletedTodos = function() {
+function createClearCompletedTodos() {
   return { type: CLEAR_COMPLETED_TODOS, payload: "" };
 };
 
-const createToggleTodoComplete = function(index) {
-  return { type: TOGGLE_TODO_COMPLETE, payload: index };
+function createToggleTodoComplete(index) {
+  return { type: TOGGLE_TODO_COMPLETE, payload: index }; 
 };
 
 //===========================================================
 // HELPERS
 //===========================================================
-export const pureReplace = (xs, x, index) => {
+export function pureReplace(xs, x, index) {
   return [...xs.slice(0, index), x, ...xs.slice(index + 1)];
 };
-export const pureAppend = (xs, x) => {
+export function pureAppend(xs, x) {
   return [...xs, x];
 };
